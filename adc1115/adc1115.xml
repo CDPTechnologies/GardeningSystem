@@ -1,0 +1,5 @@
+<Library Name="adc1115">
+ <Models>
+  <Model Name="adc1115.reader"/>
+ </Models>
+</Library>

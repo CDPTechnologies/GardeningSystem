@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ProjectConfiguration>
+<!-- Written by CDPStudio 1.2.1, 2017-08-22T16:05:20. -->
+<qtcreator>
+ <data>
+  <variable>Networks</variable>
+  <valuemap type="QVariantMap">
+   <value type="QString" key="ActiveNetwork">Ethernet</value>
+   <valuemap type="QVariantMap" key="NetworkList"/>
+  </valuemap>
+ </data>
+</qtcreator>

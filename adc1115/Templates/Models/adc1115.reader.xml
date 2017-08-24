@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<Model Name="adc1115.reader" Version="2.0">
+ <ModelTypeClass>C++</ModelTypeClass>
+ <BaseModel>CDPComponent</BaseModel>
+ <Priority>normal</Priority>
+ <fs>5</fs>
+ <Attributes>
+  <Attribute Name="Description" Value="Simple component"/>
+  <Attribute ReadOnly="1" Type="string" SaveOnChange="0" Description="Implementation model used." Name="Model" Value="adc1115.reader" Required="1"/>
+ </Attributes>
+ <Element RouteMethod="RouteEvent" LogEventOnChange="0" Type="string" SaveOnChange="0" Description="" Name="adapter"/>
+ <Signals>
+  <Signal Unit="" Model="CDPSignal&lt;double&gt;" Type="double" Description="" Name="humidity" Value="" Input="0"/>
+ </Signals>
+ <Element RouteMethod="RouteEvent" LogEventOnChange="0" Type="int" SaveOnChange="0" Name="slave_adr"/>
+ <Element RouteMethod="RouteEvent" LogEventOnChange="0" Type="short" SaveOnChange="0" Name="conf_bit"/>
+</Model>

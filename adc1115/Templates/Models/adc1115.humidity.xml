@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<Model Name="adc1115.humidity" Version="2.0">
+ <ModelTypeClass>C++</ModelTypeClass>
+ <BaseModel>CDPComponent</BaseModel>
+ <Priority>normal</Priority>
+ <fs>5</fs>
+ <Attributes>
+  <Attribute Name="Description" Value="gets humidity from humidity reader"/>
+  <Attribute Name="Model" Required="1" Description="Implementation model used." SaveOnChange="0" ReadOnly="1" Type="string" Value="adc1115.humidity"/>
+ </Attributes>
+ <Signals>
+  <Signal Name="humidity" Input="0" Model="CDPSignal&lt;short&gt;" Type="short"/>
+ </Signals>
+ <Element Name="Adapter" SaveOnChange="0" RouteMethod="RouteEvent" LogEventOnChange="0" Type="string"/>
+</Model>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ProjectConfiguration>
+<!-- Written by CDPStudio 1.2.1, 2017-08-22T16:05:20. -->
+<qtcreator>
+ <data>
+  <variable>ProjectManagerSettings</variable>
+  <valuemap type="QVariantMap">
+   <valuemap type="QVariantMap" key="ApplicationSettings">
+    <value type="QString" key="DeployDirectory">GardenSystem/System</value>
+    <value type="QString" key="DeviceId">192.168.1.116GardenSystemethernet_32769</value>
+    <value type="QString" key="TargetFriendlyName">Raspbian Jessie 32bit</value>
+   </valuemap>
+  </valuemap>
+ </data>
+</qtcreator>

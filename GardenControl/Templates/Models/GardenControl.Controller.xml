@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<Model Name="GardenControl.Controller" Version="2.0">
+ <ModelTypeClass>C++</ModelTypeClass>
+ <BaseModel>CDPComponent</BaseModel>
+ <Priority>normal</Priority>
+ <fs>5</fs>
+ <Attributes>
+  <Attribute Name="Description" Value="Simple component"/>
+  <Attribute Required="1" Name="Model" Description="Implementation model used." SaveOnChange="0" Type="string" Value="GardenControl.Controller" ReadOnly="1"/>
+ </Attributes>
+ <Element Name="Ncyle" RouteMethod="RouteEvent" SaveOnChange="0" Type="bool" LogEventOnChange="0"/>
+ <Signals>
+  <Signal Name="cyle" Input="1" Type="bool" Model="CDPSignal&lt;bool&gt;"/>
+  <Signal Name="water_switch" Description="" Input="1" Type="bool" Value="" Model="CDPSignal&lt;bool&gt;" Unit=""/>
+  <Signal Name="humidity" Input="1" Type="double" Model="CDPSignal&lt;double&gt;"/>
+  <Signal Name="reqHumidity" Input="0" Type="double" Model="CDPSignal&lt;double&gt;"/>
+  <Signal Name="isDay" Description="" Input="0" Type="bool" Value="" Model="CDPSignal&lt;bool&gt;" Unit=""/>
+ </Signals>
+ <States>
+  <State Name="Water"/>
+  <State Name="wait"/>
+ </States>
+ <StateTransitions>
+  <StateTransition Name="NullToWater" ToState="Water" FromState="Null"/>
+  <StateTransition Name="WaterToNull" ToState="Null" FromState="Water"/>
+  <StateTransition Name="NullTowait" ToState="wait" FromState="Null"/>
+  <StateTransition Name="waitToWater" ToState="Water" FromState="wait"/>
+  <StateTransition Name="WaterTowait" ToState="wait" FromState="Water"/>
+ </StateTransitions>
+ <Element Name="cycleName" RouteMethod="RouteEvent" Description="" SaveOnChange="0" Type="string" LogEventOnChange="0"/>
+ <Element Name="lastIrrigation" RouteMethod="RouteEvent" SaveOnChange="0" Type="string" LogEventOnChange="0"/>
+ <Messages>
+  <Message Name="TO_WATER"/>
+  <Message Name="TO_WAIT"/>
+ </Messages>
+ <Element Name="newReqHumidity" RouteMethod="RouteEvent" SaveOnChange="0" Type="double" LogEventOnChange="0"/>
+ <Parameters>
+  <Parameter Name="DelayTime"/>
+ </Parameters>
+ <Element Name="tempName" RouteMethod="RouteEvent" SaveOnChange="0" Type="string" LogEventOnChange="0"/>
+</Model>
