@@ -15,8 +15,8 @@ void Controller::Create(const char* fullName)
 {
     CDPComponent::Create(fullName);
     Ncyle.Create("Ncyle",this,CDPPropertyBase::e_Element,(CDPOBJECT_SETPROPERTY_HANDLER)&Controller::cyleChange,(CDPOBJECT_VALIDATEPROPERTY_HANDLER)nullptr);
-    DelayTime.Create("DelayTime",this);
-    water_switch.Create("water_switch",this);
+    delayTime.Create("DelayTime",this);
+    waterSwitch.Create("water_switch",this);
     reqHumidity.Create("reqHumidity",this);
     isDay.Create("isDay",this);
     cyle.Create("cyle",this);
@@ -57,9 +57,9 @@ void Controller::ProcessNull()
 
 void Controller::ProcessWater()
 {
-    DelayTime.Restart();
+    delayTime.Restart();
 
-    water_switch = 1;
+    waterSwitch = 1;
 
     time_t currentTime;
 
@@ -71,7 +71,7 @@ void Controller::ProcessWater()
 
 }
 
-bool Controller::isDayy()
+bool Controller::dayTime()
 {
     time_t currentTime;
 
@@ -82,9 +82,9 @@ bool Controller::isDayy()
 
 void Controller::Processwait()
 {
-    water_switch = ( DelayTime.TimeElapsed() > 15.0 ) ? 0 : 1; // checks if water tank has been open for 15 seconds.
+    waterSwitch = ( delayTime.TimeElapsed() > 15.0 ) ? 0 : 1; // checks if water tank has been open for 15 seconds.
 
-    if((humidity < reqHumidity ) && (cyle == isDayy())) { // check humidity levels against req Humidity and checks if its the right time to irrigate
+    if((humidity < reqHumidity ) && (cyle == dayTime())) { // check humidity levels against req Humidity and checks if its the right time to irrigate
         requestedState = "Water";
     }
 

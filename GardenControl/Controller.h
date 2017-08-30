@@ -34,10 +34,10 @@ protected:
     void setNewValues(CDPPropertyBase* pProperty);
     void setNewReqHumidity(CDPPropertyBase* pProperty);
     void cyleChange(CDPPropertyBase* pProperty);
-    bool isDayy();
+    bool dayTime();
     CDPProperty<bool> Ncyle;
-    CDPParameterTimer DelayTime;
-    CDPSignal<bool> water_switch;
+    CDPParameterTimer delayTime;
+    CDPSignal<bool> waterSwitch;
     CDPSignal<double> reqHumidity;
     CDPSignal<bool> isDay;
     CDPSignal<bool> cyle;

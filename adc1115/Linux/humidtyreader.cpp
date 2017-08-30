@@ -38,10 +38,8 @@ int humidtyReader::configureHumidity(short *cnf, int asd_adr, std::string adapte
     uint8_t c = 1;
     uint8_t *a = &c;
 
-    std::string device = "/dev/"; device.append(adapter);
 
-
-    if ((fd = open(device.c_str(), O_RDWR)) < 0) {
+    if ((fd = open(adapter.c_str(), O_RDWR)) < 0) {
         CDPMessage("Error: Couldn't open device! %d\n", fd);
         return 0;
     }

@@ -5,7 +5,7 @@ using namespace adc1115;
 reader::reader()
 {
     slave_adr.SetValue("0x48");
-    adapter.SetValue("i2c-1");
+    adapter.SetValue("/dev/i2c-1");
     conf_bit.SetValue("17635");
 }
 
