@@ -12,6 +12,6 @@
  <Signals>
   <Signal Unit="" Model="CDPSignal&lt;double&gt;" Type="double" Description="" Name="humidity" Value="" Input="0"/>
  </Signals>
- <Element RouteMethod="RouteEvent" LogEventOnChange="0" Type="int" SaveOnChange="0" Name="slave_adr"/>
- <Element RouteMethod="RouteEvent" LogEventOnChange="0" Type="short" SaveOnChange="0" Name="conf_bit"/>
+ <Element RouteMethod="RouteEvent" LogEventOnChange="0" Type="int" SaveOnChange="0" Name="slave_adr" value="72"/>
+ <Element RouteMethod="RouteEvent" LogEventOnChange="0" Type="short" SaveOnChange="0" Name="conf_bit" value="17635"/>
 </Model>

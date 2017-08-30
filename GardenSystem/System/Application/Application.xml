@@ -7,7 +7,7 @@
   <IsTimeServer>0</IsTimeServer>
   <OStimeInterval>120</OStimeInterval>
 
-  <NetworkInterface Name="ETH0" MAC="" IPAddress="192.168.1.77" SubnetMask="255.255.255.255"></NetworkInterface>
+  <NetworkInterface Name="ETH0" MAC="" IPAddress="192.168.1.116" SubnetMask="255.255.255.255"></NetworkInterface>
 
   <CDPMessages>
     <TimestampLocal>1</TimestampLocal>

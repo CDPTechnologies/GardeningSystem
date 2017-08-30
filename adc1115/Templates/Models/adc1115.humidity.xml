@@ -11,5 +11,5 @@
  <Signals>
   <Signal Name="humidity" Input="0" Model="CDPSignal&lt;short&gt;" Type="short"/>
  </Signals>
- <Element Name="Adapter" SaveOnChange="0" RouteMethod="RouteEvent" LogEventOnChange="0" Type="string"/>
+ <Element Name="Adapter" SaveOnChange="0" RouteMethod="RouteEvent" LogEventOnChange="0" Type="string" value="/dev/i2c-1"/>
 </Model>
